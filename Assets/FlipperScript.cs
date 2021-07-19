@@ -25,7 +25,7 @@ public class FlipperScript : MonoBehaviour
     {
         JointSpring spring = new JointSpring();
         spring.spring = hitStrenght;
-        spring.damper = flipperDamper;
+        spring.damper = flipperDamper;  
 
 
         if(Input.GetAxis(inputName) == 1){
@@ -34,8 +34,6 @@ public class FlipperScript : MonoBehaviour
         else{
             spring.targetPosition = restPosition;
         }
-
-        Input.GetKey(KeyCode.RightArrow);
        
         hinge.spring = spring;
         hinge.useLimits = true;

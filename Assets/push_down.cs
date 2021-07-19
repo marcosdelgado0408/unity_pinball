@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class push : MonoBehaviour
+public class push_down : MonoBehaviour
 {
-    float speed = 1000f;
+    public float speed;
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -22,7 +20,7 @@ public class push : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
 
-        this.GetComponent<Rigidbody>().AddForce(Vector3.back * speed);
+        this.GetComponent<Rigidbody>().AddForce(Vector3.down * speed);
     }
 
 
